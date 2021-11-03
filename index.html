@@ -1,0 +1,209 @@
+﻿<html>
+<head>
+<title>Project</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+header{
+height:60px;
+background-image:url('img4.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;;
+padding:0 50px;
+}
+.logo{
+width:40%;
+float:left;
+color:black;
+font-weight:bold;
+text-transform:uppercase;
+line-height:60px;
+font-size:25px;
+font-family:Forte;
+}
+
+body {
+  background-image:url('img3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.banner
+{
+font-family:TimesNewRoman;
+font-size:30px;
+font-weight:bold;
+padding:0px 50px 0 50px;
+color:white;
+}
+.banner a
+{
+color: pink;
+padding:10px 20px 60px 10px;
+
+}
+
+.content p
+{
+text-align:center;
+color:white;
+font-family:Georgia;
+font-size:28px;
+margin-bottom:500px;
+margin-top:300px;
+padiing: px 35px;
+
+}
+
+footer
+{
+background-image:url('img4.jpg');
+padding: 15px 50px;
+text-align:center;
+color:black;
+font-family:fajita;
+font-weight:bold;
+font-size:18px
+
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Happify you:)</div>
+
+</header>
+<div class="topleft">
+<img src="img6.jpg"
+width="80"
+height="80"
+/>
+
+</div>
+<div class="banner">
+<nav>
+<center>
+<a href="Happiness.html">Happiness</a>
+<a href="motivational.html">Motivational</a>
+</center>
+</nav>
+</div>
+
+<div class="content">
+<p> Happiness is the key towards leading a happy life. Happiness has no common definition and meaning that is accepted by all.
+
+Every individual defines happiness in his/ her own unique way the way he/she feels it. Happiness can never be seen, it can only be felt by the one who get it. Happiness is said to be an individual’s beliefs, faith, desires and aspirations.
+*
+Happiness is connected with things that make you feel happy such as faith, wealth, career, relationships and love. For many people happiness is much more than career, success and wealth.</p>
+</div>
+<div id="test">
+	<form text-align="bottom" method="POST" autocomplete="off" name="google-sheet">
+	<table height="300px" width="100%" align="right" vertical-align="center" >
+	<tr>
+	<td><b><font color="black" >Name:</font></b></td>
+	<td><input name="Name" type="text"></td>
+	</tr>
+	<tr>
+	<td><b><font color="black">Mobile Number:</font></b></td>
+	<td><input name="Phone" type="text"></td>
+	</tr>
+	<td><b><font color="black">Email id:</font></b></td>
+	<td><input name="Email" type="Email"></td>
+	</tr>
+	<tr>
+	<td><b><font color="black">Date of Birth:</font></b></td>
+	<td><select name="Month">
+	<option value="month">Month</option>
+	<option value="january">January</option>
+	<option value="february">February</option>
+	<option value="march">March</option>
+	<option value="april">April</option>
+	<option value="may">May</option>
+	<option value="june">June</option>
+	<option value="july">July</option>
+	<option value="august">August</option>
+	<option value="september">September</option>
+	<option value="october">October</option>
+	<option value="november">November</option>
+	<option value="december">December</option>
+	</select>
+	<select name="Date">
+	<option value="date">Date</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>	
+	<option value="6">6</option>	
+	<option value="7">7</option>	
+	<option value="8">8</option>	
+	<option value="9">9</option>	
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>	
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+	</select>
+	</td>
+	</tr>
+	<tr>
+	<td><b><font color="black">Address:</font></b></td>
+	<td><input name="Address" type="text"></td>
+	</font>
+	</select>
+	</td>
+	</tr>
+	<tr>
+	<td><b><font color="black">Location (As URL):</font></b></td>
+	<td><input name="Location" type="text"></td>
+	</tr>
+	<tr>
+	<th colspan="2">
+	<div >
+	<input type="Submit">
+	<input type="reset">
+	</div>
+	</th>
+	</tr>
+	</table>
+	</form>
+</div>
+	<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby6zm_DgZwkCSPEkUNRD3CblQ1J-ox0v5VNN2DReaIQYnwDHHWrBj8vD30KrJ1NDQwJfA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Reaching us..!"))
+                .catch(error => console.error('Error!', error.message))
+            })
+       </script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+<footer>
+<p> Life is very short nanba. Always be happy!</p>
+</footer>
+
+</body>
+</html>
